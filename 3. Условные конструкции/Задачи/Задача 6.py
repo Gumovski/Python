@@ -1,16 +1,15 @@
 a = int(input())
 b = int(input())
 c = int(input())
-# Теоремой Пифагора
-# Найти Гипотенузу и катеты
-if c**2 == a**2 + b**2 or a**2 == b**2 + c**2 or b**2 == a**2 + c**2:
+h = max(a, b, c)
+c1 = min(a, b, c)
+c2 = a + b + c - h - c1
+if a + b <= c or a + c <= b or b + c <= a:
+    print('Треугольник не существует')
+elif h**2 == c1**2 + c2**2:
     print('Прямоугольный')
+elif h**2 > c1**2 + c2**2:
+    print('Тупоугольный')
 else:
-    if c**2 > a**2 + b**2 or a**2 > b**2 + c**2 or b**2 > a**2 + c**2:
-        print('Тупоугольный')
-    else:
-        if c**2 < a**2 + b**2 or a**2 < b**2 + c**2 or b**2 < a**2 + c**2:
-            print('Остроугольный')
-        else:
-            print('Остроугольный')
+    print('Остроугольный')
 
