@@ -6,7 +6,8 @@ def chess_order(n, m):
 def cross(n):
     return [[1 if (i == j or i + j == n - 1) else 0 for j in range(n)] for i in range(n)]
 
-
+def quadrants(n):
+    return[]
 
 ###
 def print_matrix(matrix):
