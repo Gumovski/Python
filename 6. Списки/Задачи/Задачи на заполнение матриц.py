@@ -3,6 +3,7 @@ def multiply(n,m):
 
 def chess_order(n, m):
     return [[1 if (i + j) % 2 == 0 else 0 for i in range(n)] for j in range(m)]
+
 def cross(n):
     return [[1 if (i == j or i + j == n - 1) else 0 for j in range(n)] for i in range(n)]
 
