@@ -8,10 +8,10 @@ def cross(n):
     return [[1 if (i == j or i + j == n - 1) else 0 for j in range(n)] for i in range(n)]
 
 def quadrants(n):
-    pass
+    return [[0 if (i == j or i + j == n - 1) else 3 if (i > j and i + j > n - 1) else 4 if (i > j and i + j < n - 1) else 1 if (i < j and i + j < n - 1) else 2 for j in range(n) ] for i in range(n)]
 
 def nested_rectangles(n, m):
-    pass
+    return [[min(i, j, m - 1 - i, n - 1 - j) for j in range(n)] for i in range(m)]
 
 def spiral(n, m):
     pass
@@ -22,6 +22,6 @@ def print_matrix(matrix):
         for i in row:
             print(f'{i:<3d}', end='')
         print()
-print_matrix(cross(8))
+print_matrix(quadrants(8))
 ###
 
