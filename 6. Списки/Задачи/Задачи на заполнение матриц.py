@@ -14,14 +14,35 @@ def nested_rectangles(n, m):
     return [[min(i, j, m - 1 - i, n - 1 - j) for j in range(n)] for i in range(m)]
 
 def spiral(n, m):
-    pass
-
+    matrix = [[0 for i in range(n)]for j in range(m)]
+    x = 0
+    up = 0
+    down = n - 1
+    left = 0
+    right = m - 1
+    while n*m >= x:
+        for j in range(m):
+            matrix[up][j] = x
+            x += 1
+        up += 1
+        for i in range(n):
+            matrix[i][b] = x
+            x += 1
+        if
+            for j in range(m):
+                matrix[n - k][m - j] = x
+                x += 1
+        if
+            for i in range(n-1):
+                matrix[i][n - i] = x
+                x += 1
+    return matrix
 ###
 def print_matrix(matrix):
     for row in matrix:
         for i in row:
             print(f'{i:<3d}', end='')
         print()
-print_matrix(quadrants(8))
+print_matrix(spiral(7,10))
 ###
 
