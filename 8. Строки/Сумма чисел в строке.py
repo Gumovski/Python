@@ -4,7 +4,7 @@ result = 0
 
 for value in s:
     if value.isdigit():
-        separator = num * 10 + int(value)
+        num = num * 10 + int(value)
     else:
         result += num
         num = 0
