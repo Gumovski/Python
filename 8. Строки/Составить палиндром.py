@@ -19,20 +19,15 @@ if (len(sort) % 2 == 0 and odd != 0) or (len(sort) % 2 != 0 and odd != 1):
     print('NO')
     exit()
 #
-left_part = []
-for i in range(len(alphabet) - 1,-1,-1):
-    letter_alphabet = alphabet[i]
-    count = 0
-    for letter in sort:
-        if letter == letter_alphabet:
-            count += 1
-    for j in range(count // 2):
-        left_part.append(letter_alphabet)
+left_part = ''
+for i in range(len(alphabet) - 1, -1, -1):
+    count = sort.count(alphabet[i])
+    left_part += alphabet[i] * (count // 2)
 #
 right_part = left_part[::-1]
-result = ''.join(left_part)
+result = left_part
 if len(sort) % 2 == 1:
     result += odd_letter
-result += ''.join(right_part)
+result += right_part
 #
 print(result.upper())
