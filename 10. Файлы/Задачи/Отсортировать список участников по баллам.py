@@ -26,3 +26,4 @@ for i in range(len(s)):
 
 for student in s:
     print(f'{student[0]} {student[1]} {student[2]}')
+
